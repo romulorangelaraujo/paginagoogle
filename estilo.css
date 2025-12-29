@@ -1,0 +1,178 @@
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Conteúdo principal centralizado */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Centraliza verticalmente na parte disponível */
+    flex: 1;
+    /* Ocupa o espaço restante empurrando o footer para baixo */
+    /* Google não é exatamente no centro, mas um pouco pra cima. 
+       Podemos ajustar com padding-bottom se quiser subir mais. */
+    margin-top: -50px;
+    /* Pequeno ajuste para subir visualmente */
+}
+
+h1 {
+    color: #000000;
+    text-align: center;
+    font-size: 90px;
+    /* Reduzido um pouco para ficar mais proporcional */
+    font-family: 'Product Sans', 'Google Sans', sans-serif;
+    /* Product Sans é mais próximo */
+    margin-bottom: 20px;
+    cursor: pointer;
+    /* Indicar que é clicável */
+    user-select: none;
+    /* Evitar seleção de texto ao clicar spamando */
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.botoes button {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.botoes button:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+/* A CAIXA DE PESQUISA */
+.text {
+    width: 580px;
+    max-width: 90%;
+    height: 44px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border-radius: 24px;
+    border: 1px solid #dfe1e5;
+    background-color: white;
+    padding: 0 14px;
+    /* Padding ajustado */
+}
+
+.text:hover {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-color: rgba(223, 225, 229, 0);
+}
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+/* O Input dentro da caixa */
+.text input {
+    flex: 1;
+    /* Ocupa o resto do espaço */
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+/* FOGOS */
+#fogos {
+    position: fixed;
+    /* Fixado na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    pointer-events: none;
+    /* Permite clicar através do canvas */
+}
+
+/* RODAPÉ */
+.rodape {
+    background: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    font-size: 14px;
+    color: #70757a;
+    display: flex;
+    flex-direction: column;
+}
+
+.rodape-linha-cima {
+    padding: 15px 30px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.rodape-linha-baixo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.rodape-esquerda,
+.rodape-direita {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 27px;
+}
+
+.rodape a {
+    color: #70757a;
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
+}
+
+/* Se a sua lista HTML for <ul class="menu"> */
+.menu {
+    display: flex;
+    /* Ativa o modo flexível */
+
+    /* O SEGREDO DA CENTRALIZAÇÃO HORIZONTAL */
+    justify-content: flex-end;
+
+    /* Centralização vertical */
+    align-items: center;
+
+    /* Estilo da lista */
+    list-style: none;
+    /* Remove as bolinhas */
+    padding: 0 20px;
+    /* Remove o recuo esquerdo padrão do navegador */
+    margin: 0;
+    gap: 20px;
+    height: 55px;
+}
